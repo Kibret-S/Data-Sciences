@@ -1,0 +1,64 @@
+1. The Data Wrangling Workshop: Activity 
+
+  Activity : Generating Statistics from a CSV File
+
+Suppose you are working with the Boston Housing price dataset. This dataset is famous in the machine learning community. Many regression problems can be formulated, and machine learning algorithms can be run on this dataset. You will perform a basic data wrangling activity (including plotting some trends) on this dataset (.csv file) by reading it as a pandas DataFrame. We will perform a few statistical operations on this DataFrame.
+Note
+   You can try regular matplotlib methods around this function call to make your plot pretty.
+With all this knowledge, let's try our hand at an activity.
+ The Boston Housing dataset can be found here: https://raw.githubusercontent.com/PacktWorkshops/The-Data-Wrangling-Workshop/refs/heads/master/Chapter03/datasets/Boston_housing.csv. The pandas function for reading a CSV file is read_csv.
+	These steps will help you complete this activity:
+			
+	1.Load the necessary libraries.
+	2.Read in the Boston Housing dataset (given as a .csv file) from the local directory.
+	3.Check the first 10 records. Find the total number of records.
+        4.Create a smaller DataFrame with columns that do not include CHAS, NOX, B, and LSTAT:
+            Chas: Charlse River Dummy variable
+            Nox: Nitric Oxide concentration
+            B: Proportion of the population that is African American
+            LSTAT: Percentage of lower-income population
+	5.Check the last seven records of the new DataFrame you just created.
+	6.Plot the histograms of all the variables (columns) in the new DataFrame.
+	7.Plot them all at once using a for loop. Try to add a unique title to the plot.
+	8.Create a scatter plot of crime rate versus price.
+	9.Plot log10(crime) versus price.
+	10.Calculate some useful statistics, such as mean rooms per dwelling, median age, mean distances to five Boston employment centers, and the percentage of houses with a low price (< $20,000).
+         Hint: To calculate the percentage of houses below $20,000, create a pandas series with the PRICE column and directly compare it with 20. You can do this because pandas series is basically  a NumPy array and you have seen how to filter NumPy array in the exercises in this chapter.
+
+2. The Data Wrangling Workshop: Activity 
+
+  Activity 4.01: Working with the Adult Income Dataset (UCI)
+
+In this activity, we will detect outliers in the Adult Income Dataset from the UCI machine learning portal https://raw.githubusercontent.com/PacktWorkshops/The-Data-Wrangling-Workshop/refs/heads/master/Chapter04/datasets/adult_income_data.csv.
+You can find a description of the dataset https://raw.githubusercontent.com/PacktWorkshops/The-Data-Wrangling-Workshop/refs/heads/master/Chapter04/datasets/adult_income_data.csv. We will use the concepts we've learned throughout this chapter, such as subsetting, applying user-defined functions, summary statistics, visualizations, boolean indexing, and group by to find a whole group of outliers in a dataset. We will create a bar plot to plot this group of outliers. Finally, we will merge two datasets by using a common key.  
+These are the steps that will help you solve this activity:
+
+    1.Load the necessary libraries.
+    2.Read the adult income dataset from the following URL: https://packt.live/2N9lRUU.
+    3.Create a script that will read a text file line by line.
+    4.Add a name of Income for the response variable to the dataset.
+    5.Find the missing values.
+    6.Create a DataFrame with only age, education, and occupation by using subsetting.
+    7.Plot a histogram of age with a bin size of 20.
+    8.Create a function to strip the whitespace characters.
+    9.Use the apply method to apply this function to all the columns with string values, create a new column, copy the values from this    new column to the old column, and drop the new column.
+    10.Find the number of people who are aged between 30 and 50.
+    11.Group the records based on age and education to find how the mean age is distributed.
+    12.Group by occupation and show the summary statistics of age. Find which profession has the oldest workers on average and which profession has its largest share of the workforce above the 75th percentile.
+    13.Use subset and groupBy to find the outliers.
+    14.Plot the outlier values on a bar chart. 
+    15.Merge the two DataFrames using common keys to drop duplicate values.
+
+3. Create a series and practice basic arithmetic steps
+
+     a. Series 1 = 7.3, -2.5, 3.4, 1.5
+
+          i. Index = ‘a’, ‘c’, ‘d’, ‘e’
+
+     b. Series 2 = -2.1, 3.6, -1.5, 4, 3.1
+
+          i. Index = ‘a’, ‘c’, ‘e’, ‘f’, ‘g’
+
+c. Add Series 1 and Series 2 together and print the results
+
+d. Subtract Series 1 from Series 2 and print the results
